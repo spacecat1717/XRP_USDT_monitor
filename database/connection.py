@@ -2,6 +2,7 @@
 
 import asyncpg
 
+from config.config import DB_HOST, DB_PASS, DB_NAME, DB_USER
 
 class Connection:
     __instance = None
@@ -17,10 +18,10 @@ class Connection:
         if (self.__initialized):
             return
         self.__initialized = True
-        self._db_name = 'test_1'
-        self._db_user = 'postgres'
-        self._db_password ='Teatea_0'
-        self._db_host = 'localhost'
+        self._db_name = DB_NAME
+        self._db_user = DB_USER
+        self._db_password = DB_PASS
+        self._db_host = DB_HOST
         self._conn = None
 
     async def _get_conn(self):
