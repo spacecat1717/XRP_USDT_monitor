@@ -37,3 +37,9 @@ else
     read -p "DB HOST = " POSTGRES_HOST
     echo "DB_HOST=$POSTGRES_HOST" >> $ENV_PATH
 fi
+
+echo Loading a data from .env file
+. $ENV_PATH
+echo Loaded
+
+python3.10 main.py
