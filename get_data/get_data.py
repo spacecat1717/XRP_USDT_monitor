@@ -14,5 +14,3 @@ class DataGetter:
         one_percent = max_value / 100
         if (max_value - current_amount) >= one_percent:
             print('Цена упала на 1% от максимальной цены за последний час!')
-        else:
-            print('works')
